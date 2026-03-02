@@ -6,11 +6,11 @@
 
 - **React** 18  
 - **TypeScript**  
-- **TanStack Query** v5 (ранее React Query)  
+- **TanStack Query** v5
 - **React Router**  
-- **Emotion** (styled-components подход)  
-- **React Toastify** — уведомления  
-- **Lodash.debounce** — защита от спама запросов  
+- **Emotion**
+- **React Toastify**
+- **Lodash.debounce**
 
 ## Основной функционал
 
@@ -33,10 +33,10 @@
 
 ```text
 src/
-├── pages/          # страницы приложения (роуты)
-├── components/     # переиспользуемые UI-компоненты
-├── hooks/          # кастомные хуки (в основном для React Query)
-├── store/          # глобальное состояние (в основном пагинация)
-├── types/          # общие типы и интерфейсы
-├── service/        # API-запросы, axios-инстанс, query keys
-└── ...
+├── pages/          # страницы приложения
+├── components/     # UI-компоненты
+├── hooks/          # кастомные хуки
+├── store/          # глобальное состояние
+├── types/          # общие типы
+└── service/        # API-запросы
+

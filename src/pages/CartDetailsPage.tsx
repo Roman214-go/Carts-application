@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import { CartProductsTable } from '@/components/CartDetails/CartProductsTable';
-import { CartSummary } from '@/components/CartDetails/CartSummary';
+import { CartSummary } from '@/components/CartSummary/CartSummary';
 import { Loader } from '@/components/Loader/Loader';
 import { useCart } from '@/hooks/useCart';
 import { useUpdateCart } from '@/hooks/useUpdateCart';

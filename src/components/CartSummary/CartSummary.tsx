@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import type { CartProduct } from '@/types/cart.types';
 
 import styled from '@emotion/styled';
@@ -12,7 +14,7 @@ interface Props {
   products: CartProduct[];
 }
 
-export const CartSummary = ({ products }: Props) => {
+export const CartSummary = memo(({ products }: Props) => {
   const total = products.reduce((sum, p) => sum + p.price * p.quantity, 0);
 
   return (
@@ -20,4 +22,4 @@ export const CartSummary = ({ products }: Props) => {
       <div>Общая сумма: ${total.toFixed(2)}</div>
     </Summary>
   );
-};
+});

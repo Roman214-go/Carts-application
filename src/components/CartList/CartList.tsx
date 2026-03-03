@@ -1,4 +1,4 @@
-import { CartListItem } from './CartListItem';
+import { CartListItem } from '../CartListItem/CartListItem';
 import Skeleton from 'react-loading-skeleton';
 
 import type { Cart } from '@/types/cart.types';

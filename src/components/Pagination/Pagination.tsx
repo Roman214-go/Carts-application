@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { usePaginationStore } from '@/store/usePaginationStore';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 
@@ -29,22 +31,28 @@ const Button = styled.button<{ disabled?: boolean }>`
 interface PaginationProps {
   total: number;
 }
-
-export const Pagination = ({ total }: PaginationProps) => {
+export const Pagination = memo(({ total }: PaginationProps) => {
   const { page, limit, setPage } = usePaginationStore();
+
   const totalPages = Math.ceil(total / limit);
+
+  if (totalPages === 0) {
+    return null;
+  }
 
   return (
     <PaginationWrapper>
       <Button disabled={page <= 1} onClick={() => setPage(page - 1)}>
         <GrPrevious />
       </Button>
+
       <span>
         {page} / {totalPages}
       </span>
+
       <Button disabled={page >= totalPages} onClick={() => setPage(page + 1)}>
         <GrNext />
       </Button>
     </PaginationWrapper>
   );
-};
+});

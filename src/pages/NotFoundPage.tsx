@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import styled from '@emotion/styled';
+
 import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 
 const float = keyframes`
   0%, 100% { transform: translateY(0) rotate(0deg); }

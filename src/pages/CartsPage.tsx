@@ -1,5 +1,5 @@
-import { CartsList } from '@/components/Carts/CartList';
-import { Pagination } from '@/components/Carts/Pagination';
+import { CartsList } from '@/components/CartList/CartList';
+import { Pagination } from '@/components/Pagination/Pagination';
 import { useCarts } from '@/hooks/useCarts';
 import { usePaginationStore } from '@/store/usePaginationStore';
 
@@ -15,7 +15,7 @@ export const CartsPage = () => {
   const { page, limit } = usePaginationStore();
   const { data, isLoading, isError } = useCarts({ page, limit });
 
-  if (isError) return <PageContainer>Error loading carts.</PageContainer>;
+  if (isError) return <PageContainer>Ошибка загрузки корзин. Попробуйте позже</PageContainer>;
 
   return (
     <PageContainer>

@@ -1,5 +1,8 @@
+import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import type { Cart } from '@/types/cart.types';
+
 import styled from '@emotion/styled';
 
 const Row = styled.div`
@@ -76,7 +79,7 @@ interface CartListItemProps {
   cart: Cart;
 }
 
-export const CartListItem = ({ cart }: CartListItemProps) => {
+export const CartListItem = memo(({ cart }: CartListItemProps) => {
   const navigate = useNavigate();
 
   return (
@@ -90,4 +93,4 @@ export const CartListItem = ({ cart }: CartListItemProps) => {
       </Cell>
     </Row>
   );
-};
+});

@@ -2,6 +2,10 @@
 
 Современное одностраничное приложение для работы с корзинами покупок
 
+<img width="1509" height="655" alt="image" src="https://github.com/user-attachments/assets/299a1f65-c8dc-4a60-bfb5-dcb329be2523" />
+
+<img width="1543" height="753" alt="image" src="https://github.com/user-attachments/assets/05bf8ef0-6ac4-4374-9ad6-6b4d13014068" />
+
 ## Технологии
 
 - **React** 18  
